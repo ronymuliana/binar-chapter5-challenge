@@ -1,0 +1,43 @@
+{
+  "1": {
+    "first_name": "Sinta",
+    "last_name": "Gading",
+    "email": "sinta_gading@gmail.com",
+    "id": 1
+  },
+  "2": {
+    "id": 2,
+    "first_name": "Haris",
+    "last_name": "Gunawan",
+    "email": "haris_gunawan@gmail.com",
+    "password": "password1"
+  },
+  "3": {
+    "id": 3,
+    "first_name": "Anton",
+    "last_name": "Mario",
+    "email": "anton_mario@gmail.com",
+    "password": "password1"
+  },
+  "4": {
+    "id": 4,
+    "first_name": "Herman",
+    "last_name": "Prasetyo",
+    "email": "herman_prasetyo@gmail.com",
+    "password": "password1"
+  },
+  "5": {
+    "id": 5,
+    "first_name": "Lisa",
+    "last_name": "Permadi",
+    "email": "lisa_permadi@gmail.com",
+    "password": "password1"
+  },
+  "1650101628798": {
+    "id": 7,
+    "first_name": "Mike",
+    "last_name": "Tyson",
+    "email": "mike_tyson@gmail.com",
+    "password": "password1"
+  }
+}

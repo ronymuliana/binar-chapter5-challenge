@@ -1,0 +1,38 @@
+{
+  "23b5f65f-f79f-4850-92b5-fd41d13fc6e2": {
+    "first_name": "Budi",
+    "last_name": "Harianto",
+    "email": "budi_harianto@gmail.com",
+    "password": "password12345"
+  },
+  "aecbbfbe-b8ec-4bb9-a914-c219a0eaf9cf": {
+    "first_name": "Heny",
+    "last_name": "Muliadi",
+    "email": "nobody@gmail.com",
+    "password": "password12"
+  },
+  "805aa501-6839-42da-974d-d6aea75bd435": {
+    "first_name": "Tom",
+    "email": "tom_cruise@gmail.com",
+    "password": "password321",
+    "last_name": "cruise"
+  },
+  "aea498f7-fa80-487b-a5a6-788acd87d5bd": {
+    "first_name": "Tom",
+    "last_name": "Harley",
+    "email": "michelle_harley@gmail.com",
+    "password": "dodolipet"
+  },
+  "bcac42a6-9a10-4286-9da0-58f6f84b8fde": {
+    "first_name": "Ali",
+    "last_name": "Topan",
+    "email": "ali_topan@gmail.com",
+    "password": "rahasia333"
+  },
+  "f55f3413-07d5-4ed7-a55f-0b5aee2944ea": {
+    "first_name": "Maruf",
+    "last_name": "Alhuda",
+    "email": "maruf_alhuda@gmail.com",
+    "password": "Simple123"
+  }
+}

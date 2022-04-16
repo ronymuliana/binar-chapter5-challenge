@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/games.css">
+  <title>Try Out The Games</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="back-button">
+        <a href="index.html"></a>
+        <span>
+        </span>
+      </div>
+      <div class="title">
+        <div class="title-logo">
+          <img src="./assets/logo.png" alt="logo" width="80px" height="80px">
+        </div>
+        <div class="title-text">
+          <h1>Rock | Paper | Scissors</h1>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <main class="main">
+      <!-- Player section -->
+      <div class="player">
+        <div class="user-title">
+          <h2 style="border-color: yellow; ">Player 1</h2>
+        </div>
+        <div class="user-choice">
+          <button id="rock-player1" class="choice batu">
+            <img src="./assets/batu.png" alt="batu" width="128px" height="128px">
+          </button>
+
+          <button id="paper-player1" class="choice kertas">
+            <img src="./assets/kertas.png" alt="kertas" width="128px" height="128px">
+          </button>
+
+          <button id="scissors-player1" class="choice gunting">
+            <img src="./assets/gunting.png" alt="gunting" width="128px" height="128px">
+          </button>
+        </div>
+      </div>
+      <!-- End Player section -->
+
+      <!-- Versus section  -->
+      <div id="result" class="versus">
+        VS
+      </div>
+      <!-- End Versus section  -->
+
+      <!-- COM Section -->
+      <div class="player">
+        <div class="user-title">
+          <h2 style="border-color: lime; ">COM</h2>
+        </div>
+        <div class="user-choice">
+          <button id="rock-player2" class="choice batu">
+            <img src="./assets/batu.png" alt="batu" width="128px" height="128px">
+          </button>
+
+          <button id="paper-player2" class="choice kertas">
+            <img src="./assets/kertas.png" alt="kertas" width="128px" height="128px">
+          </button>
+
+          <button id="scissors-player2" class="choice gunting">
+            <img src="./assets/gunting.png" alt="gunting" width="128px" height="128px">
+          </button>
+        </div>
+      </div>
+      <!-- End COM Section -->
+
+      <!-- Reset Section -->
+      <div class="reset">
+        <button id="reset" type="reset">
+          <img src="./assets/refresh.png" alt="reset button" width="68px" height="68px">
+        </button>
+      </div>
+      <!-- End Reset Section -->
+
+    </main>
+  </div>
+
+  <script src="./js/script.js" defer></script>
+</body>
+
+</html>
