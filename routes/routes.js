@@ -3,20 +3,20 @@ const authRoutes = require('./auth');
 
 const appRouter = (app, fs) => {
 
-    app.get('/', (request,response) => {
-        response.render('index');
+    app.get('/', (request,res) => {
+        return res.render('index');
     })
 
-    app.get('/games', (request,response) => {
-        response.render('games/index');
+    app.get('/games', (request,res) => {
+        return res.render('games/index');
     })
 
-    app.get('/login', (request, response) => {
-        response.render('login')
+    app.get('/login', (request, res) => {
+        return res.render('login')
     })
 
-    app.get('/signup', (request, response) => {
-        response.render('signup')
+    app.get('/signup', (request, res) => {
+        return res.render('signup')
     })
     userRoutes(app, fs);
     authRoutes(app, fs);

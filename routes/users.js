@@ -16,7 +16,7 @@ const userRoutes = (app, fs) => {
             for (var id in users){
                 users[id].password = '**********';
             }
-            res.status(200).send(users);
+            return res.status(200).send(users);
         });
     });
 
@@ -28,9 +28,9 @@ const userRoutes = (app, fs) => {
                 // delete data[userId].password;
                 // we conceal the real passsword
                 data[userId].password = '**********';
-                res.send(data[userId]);
+                return res.send(data[userId]);
             } else {
-                res.status(201).send(`Error: id ${userId} cannot be found!`);
+                return res.status(201).send(`Error: id ${userId} cannot be found!`);
             }
         },
             true);
@@ -43,7 +43,7 @@ const userRoutes = (app, fs) => {
             const email = req.body.email.toLowerCase();
             for (var id in data){
                 if (data[id].email.toLowerCase() === email){
-                    res.status(201).send(`Error: email ${email} already exists in database!`);
+                    return res.status(201).send(`Error: email ${email} already exists in database!`);
                     return;
                 }
             }                        
@@ -56,7 +56,7 @@ const userRoutes = (app, fs) => {
             data[newUserId.toString()] = req.body;
 
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(201).send('new user added');
+                return res.status(201).send('new user added');
             });
         },
             true);
@@ -74,7 +74,7 @@ const userRoutes = (app, fs) => {
             if (data[userId].email.toLowerCase() != email){
                 for (var key in data){
                     if (data[key].email.toLowerCase() === email){
-                        res.status(201).send('Error: email already exists in database!');
+                        return res.status(201).send('Error: email already exists in database!');
                         return;
                     }
                 }    
@@ -82,7 +82,7 @@ const userRoutes = (app, fs) => {
             data[userId] = { ...data[userId], ...req.body};
 
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send(`users id:${userId} updated`);
+                return res.status(200).send(`users id:${userId} updated`);
             });
         },
             true);
@@ -97,7 +97,7 @@ const userRoutes = (app, fs) => {
             delete data[userId];
 
             writeFile(JSON.stringify(data, null, 2), () => {
-                res.status(200).send(`users id:${userId} removed`);
+                return res.status(200).send(`users id:${userId} removed`);
             });
         },
             true);
