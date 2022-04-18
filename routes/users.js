@@ -11,7 +11,12 @@ const userRoutes = (app, fs) => {
     // READ all users
     app.get('/users', (req, res) => {
         readFile(data => {
-            res.send(JSON.parse(data));
+            let users = JSON.parse(data);
+            // we don't want to show users' passwords
+            for (var id in users){
+                users[id].password = '**********';
+            }
+            res.status(200).send(users);
         });
     });
 
@@ -22,7 +27,7 @@ const userRoutes = (app, fs) => {
             if (data[userId]){
                 // delete data[userId].password;
                 // we conceal the real passsword
-                data[userId].password = '********';
+                data[userId].password = '**********';
                 res.send(data[userId]);
             } else {
                 res.status(201).send(`Error: id ${userId} cannot be found!`);
@@ -36,9 +41,9 @@ const userRoutes = (app, fs) => {
         readFile(data => {
             // check if email already in database
             const email = req.body.email.toLowerCase();
-            for (var key in data){
-                if (data[key].email.toLowerCase() === email){
-                    res.status(201).send('Error: email already exists in database!');
+            for (var id in data){
+                if (data[id].email.toLowerCase() === email){
+                    res.status(201).send(`Error: email ${email} already exists in database!`);
                     return;
                 }
             }                        

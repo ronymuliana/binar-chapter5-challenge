@@ -3,6 +3,7 @@ const authRoutes = (app, fs) => {
     const { readFile } = require('./helpers');
 
     app.post('/auth', (req, res) => {
+        console.log(req.body);
         readFile(data => {
             const email = req.body.email.toLowerCase();
             // check if email already in database
